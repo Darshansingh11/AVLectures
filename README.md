@@ -2,7 +2,7 @@
 Official repository for our paper, "Unsupervised Audio-Visual Lecture Segmentation", WACV 2023. 
 
 
-[![License: CC BY-NC 4.0](https://img.shields.io/badge/License%3A-%20CC%20BY--NC%204.0-orange.svg)](https://creativecommons.org/licenses/by-nc/4.0/) [![arXiv: 2210.16644](https://img.shields.io/badge/arxiv-2022.166036-brightgreen.svg)](https://arxiv.org/abs/2210.16644) [![webpage: CVIT](https://img.shields.io/badge/webpage-CVIT-blue.svg)](https://cvit.iiit.ac.in/research/projects/cvit-projects/avlectures) 
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License%3A-%20CC%20BY--NC%204.0-orange.svg)](https://creativecommons.org/licenses/by-nc/4.0/) [![arXiv: 2210.16644](https://img.shields.io/badge/arXiv-2210.16644-brightgreen.svg)](https://arxiv.org/abs/2210.16644) [![webpage: CVIT](https://img.shields.io/badge/webpage-CVIT-blue.svg)](https://cvit.iiit.ac.in/research/projects/cvit-projects/avlectures) 
 
 
 > [**Unsupervised Audio-Visual Lecture Segmentation**](https://arxiv.org/abs/2210.16644)<br>
