@@ -1,6 +1,10 @@
 # Unsupervised Audio-Visual Lecture Segmentation
 Official repository for our paper, "Unsupervised Audio-Visual Lecture Segmentation", WACV 2023. 
 
+
+> [**Unsupervised Audio-Visual Lecture Segmentation**](https://arxiv.org/abs/2210.16644)<br>
+> [Darshan Singh S](https://www.linkedin.com/in/darshansinghs/), [Anchit Gupta](https://www.linkedin.com/in/anchit-gupta-b4072a169/), [C. V. Jawahar](https://faculty.iiit.ac.in/~jawahar/), [Makarand Tapaswi](https://makarandtapaswi.github.io/)<br>IIIT Hyderabad
+
 ## AVLectures
 As a part of this work we introduce, AVLectures, a large-scale educational audio-visual lectures dataset to facilitate research in the domain of lecture video understanding. The dataset comprises of 86 courses with over 2,350 lectures for a total duration of 2,200 hours. Each course in our dataset consists of video lectures, corresponding transcripts, OCR outputs for frames, and optionally lecture notes, slides, and other metadata making our dataset a rich multi-modality resource.
 
@@ -48,3 +52,18 @@ Coming soon!
 
 ### Code
 Code coming soon!
+
+# Citation
+If you find our dataset/code useful, feel free to leave a star and please cite our paper as follows:
+```
+@article{AVLectures,
+  title={Unsupervised Audio-Visual Lecture Segmentation},
+  author={Singh, Darshan and Gupta, Anchit and Jawahar, CV and Tapaswi, Makarand},
+  journal={arXiv preprint arXiv:2210.16644},
+  year={2022}
+}
+```
+
+# Contact 
+> Darshan Singh S (darshan.singh@research.iiit.ac.in) <br>
+> Anchit Gupta (anchit.gupta@research.iiit.ac.in)
