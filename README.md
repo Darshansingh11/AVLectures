@@ -2,6 +2,9 @@
 Official repository for our paper, "Unsupervised Audio-Visual Lecture Segmentation", WACV 2023. 
 
 
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License%3A-%20CC%20BY--NC%204.0-orange.svg)](https://creativecommons.org/licenses/by-nc/4.0/) [![arXiv: 2210.16644](https://img.shields.io/badge/arxiv-2022.166036-brightgreen.svg)](https://arxiv.org/abs/2210.16644) [![webpage: CVIT](https://img.shields.io/badge/webpage-CVIT-blue.svg)](https://cvit.iiit.ac.in/research/projects/cvit-projects/avlectures) 
+
+
 > [**Unsupervised Audio-Visual Lecture Segmentation**](https://arxiv.org/abs/2210.16644)<br>
 > [Darshan Singh S](https://www.linkedin.com/in/darshansinghs/), [Anchit Gupta](https://www.linkedin.com/in/anchit-gupta-b4072a169/), [C. V. Jawahar](https://faculty.iiit.ac.in/~jawahar/), [Makarand Tapaswi](https://makarandtapaswi.github.io/)<br>IIIT Hyderabad
 
@@ -12,8 +15,10 @@ Courses span a broad range of subjects, including Mathematics, Physics, EECS, an
 presentation modes in our dataset). 
 ![AVLectures Stats](https://github.com/Darshansingh11/AVLectures/blob/main/figures/AVLectures_stats.jpg?raw=true)
 
+Among the 86 courses in AVLectures, a significant subset of 15 courses also have temporal segmentation boundaries. We refer to this subset as the Courses with Segmentation (CwS) and the remainder 71 courses as the Courses without Segmentation (CwoS).
+
 ### Download instructions and the dataset format
-[Link - 1](https://iiitaphyd-my.sharepoint.com/:f:/g/personal/darshan_singh_research_iiit_ac_in/EnQk4QRv6cREusJliZoZPtgB-LIEwPn18LmMgJ-upM8A4Q?e=gt0LAA)
+[AVLectures download link](https://iiitaphyd-my.sharepoint.com/:f:/g/personal/darshan_singh_research_iiit_ac_in/EnQk4QRv6cREusJliZoZPtgB-LIEwPn18LmMgJ-upM8A4Q?e=gt0LAA)
 
 Each course is provided as a tar file so the user can download any course of interest or download the entire dataset at once. 
 To untar a course execute the following: `tar xvzf <courseID.tar.gz>` 
@@ -48,7 +53,7 @@ where `@@` is the delimiter.
 
 Coming soon!
 
-## Segmentation
+## Temporal Segmentation
 
 ### Code
 Code coming soon!
