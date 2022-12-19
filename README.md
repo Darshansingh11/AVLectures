@@ -18,7 +18,8 @@ presentation modes in our dataset).
 Among the 86 courses in AVLectures, a significant subset of 15 courses also have temporal segmentation boundaries. We refer to this subset as the Courses with Segmentation (CwS) and the remainder 71 courses as the Courses without Segmentation (CwoS).
 
 ### Download instructions and the dataset format
-[AVLectures download link](https://iiitaphyd-my.sharepoint.com/:f:/g/personal/darshan_singh_research_iiit_ac_in/EnQk4QRv6cREusJliZoZPtgB-LIEwPn18LmMgJ-upM8A4Q?e=gt0LAA)
+
+[![AVLectures: Download](https://img.shields.io/badge/AVLectures-Download-ff69b4.svg)](https://iiitaphyd-my.sharepoint.com/:f:/g/personal/darshan_singh_research_iiit_ac_in/EnQk4QRv6cREusJliZoZPtgB-LIEwPn18LmMgJ-upM8A4Q?e=gt0LAA) 
 
 Each course is provided as a tar file so the user can download any course of interest or download the entire dataset at once. 
 To untar a course execute the following: `tar xvzf <courseID.tar.gz>` 
