@@ -32,22 +32,27 @@ After extracting the directory structure of a CwS course would be as follows:
 --mitxyz
 ---metadata/
 ---OCR/
----segments_stats.pkl
----segments_ts.txt
 ---subtitles/
 ---videos/
+---segmentation/
+------segments_stats.pkl
+------segments_ts.txt
+------subtitles/
+------videos/
 ```
-* `videos/`: Contains lectures of that particular course.
-* `subtitles/`: Contains corresponding subtitle files (.srt) for each of the video lecture in `videos/`. The names of corresponding subtitle file and video file matches.
+* `videos/`: Contains original downloaded lectures of that particular course.
+* `subtitles/`: Contains corresponding subtitle files (`.srt`) for each of the video lecture in `videos/`. The names of corresponding subtitle file and video file matches.
 * `OCR/`: Contains OCR of frames of the video lectures at a rate of 10 per second using Google Cloud OCR API. The no. of folders in this directory is equal to the no. of video lectures. The folders are named after the video lectures. Each file inside these folders is a `.json` file and is named as follows:
 `<frame_no>_<int_frame_rate>_<dec_frame_rate>_<timestamp>.json`. For example: `13500_29_97_450.json` implies that this OCR is of the 13500th frame of video lecture whose frame rate is 29.97 fps (the timestamp can be calculated directly just by using these two i.e, frame no. and frame rate). 
-* `segments_ts.txt`: This text file has the segmentation information of that particular course. Each line will of the following form:
+* `segmentation/segments_ts.txt`: This text file has the segmentation information of that particular course. Each line will of the following form:
 
 ```
 <clip_name>@@<segment_start_timestamp(in seconds)>@@<segment_end_timestamp(in seconds)>@@<lecture_name>
 ```
 where `@@` is the delimiter.
-* `segements_stats.pkl`: This pickle file has the complete segmentation information of that course in a OrderedDict. For each lecture of that course this file provides the following details: start timestamp, end timestamp, no. of segments and the total duration of the lecture.
+* `segmentation/segements_stats.pkl`: This pickle file has the complete segmentation information of that course in a OrderedDict. For each lecture of that course this file provides the following details: start timestamp, end timestamp, no. of segments and the total duration of the lecture.
+* `segentation/videos/:` Contains the processed video lectures. We remove the intro, outro and optionally merge segments.
+* `segmentation/subtitles/:` Contains the corresponding subtitle files (`.srt`) for each video lecture in `segmentation/videos/`.
 * `metadata/`: Contains the optional data of the course such as lecture notes, lecture slides, assignments etc.
 
 **Courses without Segmentation (CwoS)**
