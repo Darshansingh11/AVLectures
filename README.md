@@ -67,11 +67,13 @@ Code coming soon!
 # Citation
 If you find our dataset/code useful, feel free to leave a star and please cite our paper as follows:
 ```
-@article{AVLectures,
-  title={Unsupervised Audio-Visual Lecture Segmentation},
-  author={Singh, Darshan and Gupta, Anchit and Jawahar, CV and Tapaswi, Makarand},
-  journal={arXiv preprint arXiv:2210.16644},
-  year={2022}
+@InProceedings{S._2023_WACV,
+    author    = {S., Darshan Singh and Gupta, Anchit and Jawahar, C. V. and Tapaswi, Makarand},
+    title     = {Unsupervised Audio-Visual Lecture Segmentation},
+    booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+    month     = {January},
+    year      = {2023},
+    pages     = {5232-5241}
 }
 ```
 
