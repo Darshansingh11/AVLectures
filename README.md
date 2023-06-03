@@ -67,10 +67,10 @@ where `@@` is the delimiter.
 ------videos/
 ```
 
-## Temporal Segmentation
+<!-- ## Temporal Segmentation
 
 ### Code
-Code coming soon!
+Code coming soon! -->
 
 # Citation
 If you find our dataset/code useful, feel free to leave a star and please cite our paper as follows:
