@@ -57,7 +57,15 @@ where `@@` is the delimiter.
 
 **Courses without Segmentation (CwoS)**
 
-Coming soon!
+```
+--mitxyz
+---metadata/
+---OCR/
+---subtitles/
+---videos/
+------subtitles/
+------videos/
+```
 
 ## Temporal Segmentation
 
