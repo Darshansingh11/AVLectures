@@ -107,10 +107,10 @@ Next, we can extract the learned lecture-aware features of CwS from the checkpoi
 python extract_feats.py --we_dim=768 --BERT --eval_avlectures=1 --num_thread_reader=8 --embd_dim=4096 --pretrain_path=data/ckpt/e50.pth --avlectures_val_path='data/seg_10s15s_2d3dOCRBERT.pkl' --feature_dim=6144 --ocr=1 --ocr_dim=2048 --batch_size_val=1
 ```
 
-3. Once the features are extracted, we can perform clustering using TW-FINCH as follows. (Please go to `code/TW_FINCH`). Just execute `python main.py`. This will create a pickle file that will have the clusters. You can use this [colab notebook]([url](https://drive.google.com/drive/folders/1x3juCII1wrlAycOZoY40ba9Dm92Nt33K?usp=sharing)) to evaluate the quality of generated cluster.  
+3. Once the features are extracted, we can perform clustering using TW-FINCH as follows. (Please go to `code/TW_FINCH`). Just execute `python main.py`. This will create a pickle file that will have the clusters. You can use this [Google Drive folder](https://drive.google.com/drive/folders/1x3juCII1wrlAycOZoY40ba9Dm92Nt33K?usp=sharing) to evaluate the quality of the generated cluster. Specifically, check out the `Ecls_Ecal.ipynb` colab notebook for evaluation.  
 
 # Citation
-If you find our dataset/code useful, feel free to leave a star and please cite our paper as follows:
+If you find our dataset/code useful, feel free to leave a star, and please cite our paper as follows:
 ```
 @InProceedings{S._2023_WACV,
     author    = {S., Darshan Singh and Gupta, Anchit and Jawahar, C. V. and Tapaswi, Makarand},
