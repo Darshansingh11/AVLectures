@@ -72,6 +72,35 @@ where `@@` is the delimiter.
 ### Code
 Code coming soon! -->
 
+## Temporal Segmentation
+
+### Requirements
+* Python 3
+* PyTorch (>= 1.0)
+* gensim
+
+There are three stages to perform lecture segmentation
+
+1. Extracting features from pretrained models. 
+Please use this wonderful repo to extract the lecture features - https://github.com/antoine77340/video_feature_extractor/tree/master
+
+We will uploaded the extracted features here.
+
+2. Once the features are extracted, we can train our joint embedding model on CwoS. Please go to `code/lecture_aware_embds`.
+You can execute the following command to train the model:
+
+`python train.py --num_thread_reader=8 --epochs=50 --batch_size=32 --n_pair=64 --embd_dim=4096 --checkpoint_dir=data/ckpt/ --avlectures=1 --we_dim=768 --BERT --avlectures_train_path='data/dataset_v1_leclist.pkl' --avlectures_helper_path='data/dataset_v1_helper.pkl' --save_every=10 --feature_dim=6144 --ocr=1 --ocr_dim=2048`
+
+Optionally, you can also finetune the model on CwS as follows:
+
+`python train.py --num_thread_reader=8 --epochs=50 --batch_size=32 --n_pair=-1 --embd_dim=4096 --checkpoint_dir=data/ckpt/ft/ --pretrain_path=data/ckpt/e50.pth --avlectures=1 --we_dim=768 --BERT --avlectures_train_path='data/seg_10s15s_2d3dOCRBERT.pkl' --save_every=10 --feature_dim=6144 --ocr=1 --ocr_dim=2048`
+
+Next, we can extract the learned lecture-aware featurs of CwS from the checkpoint of our trained model as follows:
+
+`python extract_feats.py --we_dim=768 --BERT --eval_avlectures=1 --num_thread_reader=8 --embd_dim=4096 --pretrain_path=data/ckpt/e50.pth --avlectures_val_path='data/seg_10s15s_2d3dOCRBERT.pkl' --feature_dim=6144 --ocr=1 --ocr_dim=2048 --batch_size_val=1`
+
+3. Once the features are extracted we can perform clustering using TW-FINCH as follows. (Please go to `code/TW_FINCH`). Just execute `python main.py`. This will create a pickle file which will have the clusters.
+
 # Citation
 If you find our dataset/code useful, feel free to leave a star and please cite our paper as follows:
 ```
