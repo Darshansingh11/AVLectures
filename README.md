@@ -74,6 +74,8 @@ Code coming soon! -->
 
 ## Temporal Segmentation
 
+This code is inspired from https://github.com/antoine77340/howto100m .
+
 ### Requirements
 * Python 3
 * PyTorch (>= 1.0)
