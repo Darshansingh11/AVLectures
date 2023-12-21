@@ -40,20 +40,20 @@ After extracting the directory structure of a CwS course would be as follows:
 ------subtitles/
 ------videos/
 ```
-* `videos/`: Contains original downloaded lectures of that particular course.
-* `subtitles/`: Contains corresponding subtitle files (`.srt`) for each of the video lecture in `videos/`. The names of corresponding subtitle file and video file matches.
+* `videos/`: Contains originally downloaded lectures of that particular course.
+* `subtitles/`: Contains corresponding subtitle files (`.srt`) for each of the video lectures in `videos/`. The names of the corresponding subtitle file and video file match.
 * `OCR/`: Contains OCR of frames of the video lectures at a rate of 10 per second using Google Cloud OCR API. The no. of folders in this directory is equal to the no. of video lectures. The folders are named after the video lectures. Each file inside these folders is a `.json` file and is named as follows:
-`<frame_no>_<int_frame_rate>_<dec_frame_rate>_<timestamp>.json`. For example: `13500_29_97_450.json` implies that this OCR is of the 13500th frame of video lecture whose frame rate is 29.97 fps (the timestamp can be calculated directly just by using these two i.e, frame no. and frame rate). 
-* `segmentation/segments_ts.txt`: This text file has the segmentation information of that particular course. Each line will of the following form:
+`<frame_no>_<int_frame_rate>_<dec_frame_rate>_<timestamp>.json`. For example: `13500_29_97_450.json` implies that this OCR is of the 13500th frame of the video lecture whose frame rate is 29.97 fps (the timestamp can be calculated directly just by using these two i.e, frame no. and frame rate). 
+* `segmentation/segments_ts.txt`: This text file has the segmentation information of that particular course. Each line will be of the following form:
 
 ```
 <clip_name>@@<segment_start_timestamp(in seconds)>@@<segment_end_timestamp(in seconds)>@@<lecture_name>
 ```
 where `@@` is the delimiter.
-* `segmentation/segements_stats.pkl`: This pickle file has the complete segmentation information of that course in a OrderedDict. For each lecture of that course this file provides the following details: start timestamp, end timestamp, no. of segments and the total duration of the lecture.
+* `segmentation/segements_stats.pkl`: This pickle file has the complete segmentation information of that course in an OrderedDict. For each lecture of that course, this file provides the following details: start timestamp, end timestamp, no. of segments, and the total duration of the lecture.
 * `segentation/videos/:` Contains the processed video lectures. We remove the intro, outro and optionally merge segments.
 * `segmentation/subtitles/:` Contains the corresponding subtitle files (`.srt`) for each video lecture in `segmentation/videos/`.
-* `metadata/`: Contains the optional data of the course such as lecture notes, lecture slides, assignments etc.
+* `metadata/`: Contains the optional data of the course, such as lecture notes, lecture slides, assignments, etc.
 
 **Courses without Segmentation (CwoS)**
 
@@ -74,19 +74,19 @@ Code coming soon! -->
 
 ## Temporal Segmentation
 
-This code is inspired from https://github.com/antoine77340/howto100m .
+This code is inspired by https://github.com/antoine77340/howto100m .
 
 ### Requirements
 * Python 3
 * PyTorch (>= 1.0)
 * gensim
 
-There are three stages to perform lecture segmentation
+There are three stages to perform lecture segmentation:
 
 1. Extracting features from pretrained models. 
 Please use this wonderful repo to extract the lecture features - https://github.com/antoine77340/video_feature_extractor/tree/master
 
-We will uploaded the extracted features here.
+We will upload the extracted features here.
 
 2. Once the features are extracted, we can train our joint embedding model on CwoS. Please go to `code/lecture_aware_embds`.
 You can execute the following command to train the model:
@@ -98,16 +98,16 @@ python train.py --num_thread_reader=8 --epochs=50 --batch_size=32 --n_pair=64 --
 Optionally, you can also finetune the model on CwS as follows:
 
 ```
-python train.py --num_thread_reader=8 --epochs=50 --batch_size=32 --n_pair=-1 --embd_dim=4096 --checkpoint_dir=data/ckpt/ft/ --pretrain_path=data/ckpt/e50.pth --avlectures=1 --we_dim=768 --BERT --avlectures_train_path='data/seg_10s15s_2d3dOCRBERT.pkl' --save_every=10 --feature_dim=6144 --ocr=1 --ocr_dim=2048
+python train.py --num_thread_reader=8 --epochs=50 --batch_size=32 --embd_dim=4096 --checkpoint_dir=data/ckpt/ft/ --pretrain_path=data/ckpt/e50.pth --avlectures=1 --we_dim=768 --BERT --avlectures_train_path='data/seg_10s15s_2d3dOCRBERT.pkl' --save_every=10 --feature_dim=6144 --ocr=1 --ocr_dim=2048
 ```
 
-Next, we can extract the learned lecture-aware featurs of CwS from the checkpoint of our trained model as follows:
+Next, we can extract the learned lecture-aware features of CwS from the checkpoint of our trained model as follows:
 
 ```
 python extract_feats.py --we_dim=768 --BERT --eval_avlectures=1 --num_thread_reader=8 --embd_dim=4096 --pretrain_path=data/ckpt/e50.pth --avlectures_val_path='data/seg_10s15s_2d3dOCRBERT.pkl' --feature_dim=6144 --ocr=1 --ocr_dim=2048 --batch_size_val=1
 ```
 
-3. Once the features are extracted we can perform clustering using TW-FINCH as follows. (Please go to `code/TW_FINCH`). Just execute `python main.py`. This will create a pickle file which will have the clusters.
+3. Once the features are extracted, we can perform clustering using TW-FINCH as follows. (Please go to `code/TW_FINCH`). Just execute `python main.py`. This will create a pickle file that will have the clusters. You can use this [colab notebook]([url](https://drive.google.com/drive/folders/1x3juCII1wrlAycOZoY40ba9Dm92Nt33K?usp=sharing)) to evaluate the quality of generated cluster.  
 
 # Citation
 If you find our dataset/code useful, feel free to leave a star and please cite our paper as follows:
