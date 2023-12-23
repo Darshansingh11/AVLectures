@@ -38,7 +38,7 @@ for dir in dir_list:
 
      base_dir = dir
 
-     # 1
+     # step 1
 
      p = ps.ParseSubtitle(base_dir = base_dir, min_time = min_time, max_time = max_time)
 
@@ -52,13 +52,13 @@ for dir in dir_list:
           print(fl)
           p.parse(fl)
      
-     # 2
+     # step 2
 
      p.combine()
 
-     # 3
+     # step 3
      
-     # m = ms.SplitVideo(base_dir = base_dir)
-     # m._split()
+     m = ms.SplitVideo(base_dir = base_dir)
+     m._split()
 
 print("Done Successfully")
