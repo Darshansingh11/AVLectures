@@ -86,7 +86,7 @@ There are three stages to perform lecture segmentation:
 1. Extracting features from pretrained models. 
 Please use this wonderful repo to extract the lecture features - https://github.com/antoine77340/video_feature_extractor/tree/master
 
-The extracted features will be uploaded here (specifically the `dataset_v1_leclist.pkl` and `dataset_v1_helper.pkl` files will be uploaded here.).
+The extracted features will be uploaded here ([`dataset_v1_leclist.pkl`](https://iiitaphyd-my.sharepoint.com/:u:/g/personal/darshan_singh_research_iiit_ac_in/ERQWxhgRPx5Cs0TK-7HFOMABjexh1nwhoutFKyd_VXJ6pg?e=dKs3ll) and [`dataset_v1_helper.pkl`](https://iiitaphyd-my.sharepoint.com/:u:/g/personal/lakshmipathi_balaji_research_iiit_ac_in/Eb4SsXm4IaNElmC0qsEWm4IBqsaHDhwyXYBBK9YtOwx3eQ?e=hEAHcf)).
 
 2. Once the features are extracted, we can train our joint embedding model on CwoS. Please go to `code/lecture_aware_embds`.
 You can execute the following command to train the model:
