@@ -19,7 +19,7 @@ Among the 86 courses in AVLectures, a significant subset of 15 courses also have
 
 ### Download instructions and the dataset format
 
-[![AVLectures: Download](https://img.shields.io/badge/AVLectures-Download-ff69b4.svg)](https://iiitaphyd-my.sharepoint.com/:f:/g/personal/darshan_singh_research_iiit_ac_in/EnQk4QRv6cREusJliZoZPtgB-LIEwPn18LmMgJ-upM8A4Q?e=gt0LAA) 
+[![AVLectures: Download](https://img.shields.io/badge/AVLectures-Download-ff69b4.svg)](https://india-data.org/dataset-details/52e67bb5-5acd-438d-a13b-f255cee17432) 
 
 Each course is provided as a tar file so the user can download any course of interest or download the entire dataset at once. 
 To untar a course execute the following: `tar xvzf <courseID.tar.gz>` 
